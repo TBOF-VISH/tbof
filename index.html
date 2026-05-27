@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Two Brothers Organic Farms</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#F7F4EC;font-family:"Barlow",sans-serif;min-height:100vh;display:flex;flex-direction:column;}
+.header{background:#243E10;padding:18px 22px 15px;display:flex;align-items:center;justify-content:space-between;}
+.brand-top{font-family:"Barlow Condensed",sans-serif;font-size:26px;font-weight:800;color:#E8D99A;letter-spacing:1.5px;text-transform:uppercase;line-height:1;}
+.brand-sub{font-size:10px;font-weight:600;letter-spacing:3.5px;color:rgba(232,217,154,0.55);text-transform:uppercase;margin-top:3px;}
+.cert{background:rgba(232,217,154,0.12);border:1px solid rgba(232,217,154,0.3);border-radius:20px;padding:5px 13px;font-size:10px;font-weight:700;letter-spacing:1px;color:#E8D99A;text-transform:uppercase;}
+.center{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 20px;gap:20px;}
+.qr-wrap{background:white;border:2px solid #C8D4B0;border-radius:16px;padding:16px;box-shadow:0 4px 20px rgba(36,62,16,0.1);}
+.scan-hint{font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#7A8A6A;text-align:center;}
+.footer{text-align:center;padding:16px;font-size:11px;color:#7A8A6A;line-height:1.8;}
+.footer strong{color:#2D5016;}
+</style>
+</head><body>
+<div class="header">
+  <div><div class="brand-top">Two Brothers</div><div class="brand-sub">Organic Farms</div></div>
+  <div class="cert">&#174; Certified</div>
+</div>
+<div class="center">
+  <div class="qr-wrap"><div id="qrcode"></div></div>
+  <div class="scan-hint">Scan to verify product</div>
+</div>
+<div class="footer"><strong>Two Brothers Organic Farms&#174;</strong><br>hello@tbof.in</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+window.addEventListener("load", function() {
+  new QRCode(document.getElementById("qrcode"), {
+    text: "https://tbofmfg1.netlify.app/info.html",
+    width: 200, height: 200,
+    colorDark: "#243E10", colorLight: "#FFFFFF",
+    correctLevel: QRCode.CorrectLevel.M
+  });
+});
+</script>
+</body></html>
